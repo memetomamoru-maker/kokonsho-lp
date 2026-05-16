@@ -1249,6 +1249,196 @@ body{
 }
 @media(max-width:639px){.show-md{display:none}}
 @media(min-width:640px){.show-sm{display:none}}
+
+/* ============================================================
+   Mobile spacing refinement
+   ============================================================ */
+@media(max-width:640px){
+  .wrap,
+  .wrap-narrow{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .section{
+    padding:64px 0;
+  }
+  .section-tight{
+    padding:56px 0;
+  }
+  .section-head{
+    margin-bottom:30px;
+    padding-left:2px;
+    padding-right:2px;
+  }
+  .section-title{
+    font-size:clamp(28px, 8vw, 34px);
+    line-height:1.55;
+    letter-spacing:.04em;
+    margin-bottom:14px;
+  }
+  .section-lead{
+    max-width:100%;
+    font-size:14.5px;
+    line-height:1.92;
+  }
+  .intro-grid,
+  .feature-grid,
+  .guardian-grid,
+  .legal-grid{
+    gap:16px;
+  }
+  .intro-card,
+  .sample-card,
+  .f-card,
+  .daily-card,
+  .mascot-band-card,
+  .legal-card{
+    border-radius:24px;
+  }
+  .intro-card{
+    padding:22px 20px;
+  }
+  .intro-card p{
+    line-height:1.88;
+  }
+  .sample-card{
+    padding:22px 18px;
+  }
+  .sample-block{
+    padding:15px 16px;
+    margin-top:16px;
+    border-radius:16px;
+  }
+  .sample-original,
+  .sample-reading,
+  .sample-translation{
+    line-height:1.82;
+  }
+  .f-card{
+    min-height:auto;
+    padding:22px 20px;
+  }
+  .f-card p{
+    line-height:1.86;
+  }
+  .mascot-band-inner{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .mascot-band-card{
+    padding:26px 20px;
+    gap:20px;
+  }
+  .mascot-figure{
+    min-height:280px;
+    padding:18px;
+  }
+  .daily-card{
+    padding:24px 18px;
+    border-radius:26px;
+  }
+  .daily-card .lead{
+    line-height:1.9;
+  }
+  .daily-list{
+    gap:12px;
+  }
+  .daily-list li{
+    font-size:14px;
+    line-height:1.76;
+  }
+  .daily-sample-board{
+    padding:18px 14px;
+    border-radius:22px;
+  }
+  .daily-sample{
+    padding:14px 14px 13px;
+    border-radius:16px;
+  }
+  .daily-sample .original{
+    line-height:1.68;
+  }
+  .daily-sample .translation{
+    line-height:1.72;
+  }
+  .talk-bubble-row{
+    gap:14px;
+  }
+  .bubble{
+    padding:22px 18px;
+    border-radius:22px;
+  }
+  .g-item{
+    padding:18px 18px;
+    gap:14px;
+    border-radius:18px;
+  }
+  .g-item .gi-body p{
+    line-height:1.84;
+  }
+  .guardian-note{
+    padding-left:4px;
+    padding-right:4px;
+    line-height:1.86;
+  }
+  .legal-card{
+    padding:22px 18px;
+  }
+  .legal-card p{
+    line-height:1.86;
+  }
+  .legal-list{
+    gap:12px;
+  }
+  .legal-list li{
+    padding-left:1.15em;
+    font-size:13.5px;
+    line-height:1.84;
+  }
+  .legal-mini-note{
+    padding-left:4px;
+    padding-right:4px;
+    line-height:1.84;
+  }
+  .final{
+    padding:64px 0 76px;
+  }
+  .final-inner{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .foot-inner{
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
+
+@media(max-width:380px){
+  .wrap,
+  .wrap-narrow{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .hero-title-mobile{
+    font-size:38px;
+  }
+  .hero-overlay-mobile{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    padding:13px 14px 14px;
+  }
+  .section-title{
+    font-size:clamp(26px, 8vw, 32px);
+  }
+  .daily-card,
+  .sample-card,
+  .legal-card{
+    padding-left:16px;
+    padding-right:16px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1332,7 +1522,7 @@ body{
       <h2 id="intro-title" class="section-title">古典をむずかしいままで<br>終わらせない。</h2>
       <p class="section-lead">
         昔の人の気持ちや知恵、たとえ。古典には今でも残ってほしい言葉がたくさん詰まっています。
-        けれどいきなり原文を読むのはむずかしい。だからまずは「なんとなくいいな」からはじめませんか。
+        けれど、いきなり原文を読むのはむずかしい。だからまずは「なんとなくいいな」からはじめませんか。
       </p>
     </div>
 
@@ -1350,7 +1540,7 @@ body{
       <article class="intro-card">
         <span class="kanji-num">三</span>
         <h3>そこから考える力へ。</h3>
-        <p>「なんとなくいいな」「この気持ち、わかる」。その小さな共感が語彙や読解、考える力の入口になります。</p>
+        <p>「なんとなくいいな」「この気持ち、わかる」。その小さな共感が、語彙や読解、考える力の入口になります。</p>
       </article>
     </div>
   </div>
@@ -1431,7 +1621,7 @@ body{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5C4 5.7 4.7 5 5.5 5h13c.8 0 1.5.7 1.5 1.5v8c0 .8-.7 1.5-1.5 1.5H10l-4 3.5V16H5.5c-.8 0-1.5-.7-1.5-1.5v-8Z"/></svg>
         </div>
         <h3>おうちの人と話してみる</h3>
-        <p>正解を当てるための問いではなく感じたことを話す入口。古典が家庭の会話につながっていきます。</p>
+        <p>正解を当てるための問いではなく、感じたことを話す入口。古典が家庭の会話につながっていきます。</p>
       </article>
       <article class="f-card">
         <span class="tag">05</span>
@@ -1455,7 +1645,7 @@ body{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5C5 4.7 5.7 4 6.5 4h11c.8 0 1.5.7 1.5 1.5v13L12 16l-7 2.5v-13Z"/><path d="M9 10l2 2 4-4"/></svg>
         </div>
         <h3>読んだきろく</h3>
-        <p>読んだカードはチェックして日付つきで残ります。「ここまで読んだ」が見える、家庭の小さな積みかさね。</p>
+        <p>読んだカードはチェックして、日付つきで残ります。「ここまで読んだ」が見える、家庭の小さな積みかさね。</p>
       </article>
     </div>
   </div>
@@ -1473,7 +1663,7 @@ body{
       <div>
         <div class="rule-gold" style="margin-left:0;margin-right:auto"></div>
         <h2 id="mascot-title"><span class="phrase">古典の妖精・ココンと</span><span class="phrase">いっしょに読む。</span></h2>
-        <p>むずかしい原文も、こども訳とふりがな、やさしいキャラクターがそばにいれば、ちょっとだけ近くなります。おうちで好きな時間にすこしずつ。</p>
+        <p>むずかしい原文も、こども訳とふりがな、やさしいキャラクターがそばにいれば、ちょっとだけ近くなります。おうちで好きな時間に、すこしずつ。</p>
       </div>
     </div>
   </div>
@@ -1522,7 +1712,7 @@ body{
         <div>
           <span class="daily-kicker">まいにち10枚</span>
           <h3>ジャンルをまたいで<br>今日読む言葉がならびます。</h3>
-          <p class="lead">300枚の中から日付ごとに10枚。同じ日に開けば同じ10枚です。歌や教え、ことわざ、慣用句が混ざるので、ひとつの入口にかたよりません。</p>
+          <p class="lead">300枚の中から、日付ごとに10枚。同じ日に開けば、同じ10枚です。歌や教え、ことわざ、慣用句が混ざるので、ひとつの入口にかたよりません。</p>
           <ul class="daily-list">
             <li><span class="chk">✓</span>百人一首・論語・故事成語・ことわざ・慣用句をまとめて読めます</li>
             <li><span class="chk">✓</span>同じ日は同じ10枚。おうちの人とも同じ言葉を見られます</li>
@@ -1635,7 +1825,7 @@ body{
     <div class="section-head">
       <div class="rule-gold"></div>
       <h2 id="guardian-title" class="section-title">保護者の方へ</h2>
-      <p class="section-lead">おうちで子どもに見せるものだからいちばん気になることを先におこたえします。</p>
+      <p class="section-lead">おうちで子どもに見せるものだから、いちばん気になることを先におこたえします。</p>
     </div>
 
     <div class="guardian-grid">
@@ -1672,7 +1862,7 @@ body{
         </div>
         <div class="gi-body">
           <b>記録は端末のなかに残る仕様</b>
-          <p>「すき」の保存、まいにち10枚、読んだきろくはご利用の端末のブラウザに保存されます。</p>
+          <p>「すき」の保存、まいにち10枚、読んだきろくは、ご利用の端末のブラウザに保存されます。</p>
         </div>
       </div>
       <div class="g-item">
@@ -1715,12 +1905,12 @@ body{
     <div class="legal-grid">
       <article class="legal-card" id="privacy">
         <h3>プライバシーポリシー</h3>
-        <p>古今掌は名前・メールアドレス・電話番号などを入力せずに使えるWebアプリです。ログイン機能もありません。</p>
+        <p>古今掌は、名前・メールアドレス・電話番号などを入力せずに使えるWebアプリです。ログイン機能もありません。</p>
         <ul class="legal-list">
-          <li>「すき」保存、まいにち10枚、読んだきろくはご利用の端末のブラウザ内に保存されます。</li>
-          <li>同じ端末・同じブラウザで開くと保存やきろくを続けて使えます。</li>
+          <li>「すき」保存、まいにち10枚、読んだきろくは、ご利用の端末のブラウザ内に保存されます。</li>
+          <li>同じ端末・同じブラウザで開くと、保存やきろくを続けて使えます。</li>
           <li>ブラウザデータの削除や別端末、別ブラウザ、シークレットモードでは保存やきろくが引き継がれない場合があります。</li>
-          <li>将来お問い合わせフォームやアクセス解析などを追加する場合は取得する情報と目的がわかるように表記を更新します。</li>
+          <li>将来、お問い合わせフォームやアクセス解析などを追加する場合は、取得する情報と目的がわかるように表記を更新します。</li>
         </ul>
       </article>
 
@@ -1728,10 +1918,10 @@ body{
         <h3>免責事項</h3>
         <p>古今掌は古典の言葉に親しむための読みもの・学習補助コンテンツです。</p>
         <ul class="legal-list">
-          <li>掲載内容は学校の成績向上、試験合格、学習効果を保証するものではありません。</li>
+          <li>掲載内容は、学校の成績向上、試験合格、学習効果を保証するものではありません。</li>
           <li>こども訳や解説は子どもが入りやすいようにやさしく言い換えています。厳密な逐語訳とは異なる場合があります。</li>
           <li>内容は確認のうえ掲載していますが正確性・完全性・最新性を常に保証するものではありません。</li>
-          <li>外部サイトへ移動する場合は移動先の内容や情報の扱いについて各サイトの方針をご確認ください。</li>
+          <li>外部サイトへ移動する場合は、移動先の内容や情報の扱いについて各サイトの方針をご確認ください。</li>
         </ul>
       </article>
     </div>
@@ -1747,7 +1937,7 @@ body{
   <div class="wrap-narrow final-inner">
     <div class="rule-gold"></div>
     <h2 id="final-title"><span class="phrase">今日の10枚から</span><span class="phrase">古典のいい言葉に</span><span class="phrase">ふれてみませんか。</span></h2>
-    <p>登録不要。無料で使えます。気になる一枚にふれてみるところからおうちの小さな読書時間がはじまります。</p>
+    <p>登録不要。無料で使えます。気になる一枚にふれてみるところから、おうちの小さな読書時間がはじまります。</p>
     <div class="final-cta-row">
       <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
         <span class="icon" aria-hidden="true">❀</span>古今掌をひらく
