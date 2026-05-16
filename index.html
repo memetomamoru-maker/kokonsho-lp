@@ -272,11 +272,8 @@ body{
   padding:clamp(18px, 4vw, 48px);
   pointer-events:none;
 }
-.hero-overlay > *{pointer-events:auto}
-.hero-text{
-  max-width:560px;
-  width:100%;
-}
+.hero-overlay-mobile{display:none}
+.hero-text{max-width:560px;width:100%}
 .hero-kana{
   font-family:var(--sans);font-weight:700;font-size:clamp(11px, 1.3vw, 14px);
   letter-spacing:.5em;color:var(--green-dark);
@@ -319,6 +316,7 @@ body{
   color:var(--brown-soft);
   text-wrap:pretty;
 }
+.hero-sub-mobile,.hero-note-mobile{display:none}
 .hero-cta-row{
   display:flex;flex-direction:column;gap:12px;
   align-items:center;justify-content:center;
@@ -354,20 +352,73 @@ body{
 
 @media(max-width:759px){
   .hero{
-    padding-top:18px;
+    padding-top:16px;
+    padding-bottom:56px;
   }
   .hero-stage{
-    border-radius:clamp(18px, 4vw, 24px);
+    border-radius:22px;
+    box-shadow:0 20px 46px rgba(82,68,40,.14), 0 0 0 1px rgba(201,163,82,.22);
   }
   .hero-bg{
-    border-radius:clamp(18px, 4vw, 24px);
+    border-radius:22px;
   }
-  .hero-overlay{
-    display:none;
+  .hero-overlay{display:none}
+  .hero-overlay-mobile{
+    display:block;
+    position:absolute;
+    left:14px;
+    right:14px;
+    bottom:14px;
+    padding:14px 16px 15px;
+    text-align:center;
+    background:rgba(255,250,238,.92);
+    border:1px solid rgba(201,163,82,.24);
+    border-radius:18px;
+    box-shadow:0 10px 22px rgba(82,68,40,.10);
+    backdrop-filter:saturate(115%) blur(6px);
+  }
+  .hero-kana-mobile{
+    margin:0 0 5px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--green-dark);
+  }
+  .hero-title-mobile{
+    font-family:var(--serif);
+    font-size:42px;
+    line-height:1;
+    letter-spacing:.08em;
+    color:var(--brown);
+    margin:0 0 8px;
+    padding-left:.08em;
+  }
+  .hero-tag-mobile{
+    margin:0;
+    font-family:var(--serif);
+    font-size:15px;
+    line-height:1.7;
+    color:var(--brown);
   }
   .hero-below{
-    margin-top:24px;
+    margin-top:18px;
+    padding:0 12px;
   }
+  .hero-sub-desktop,.hero-note-desktop{display:none}
+  .hero-sub-mobile,.hero-note-mobile{display:block}
+  .hero-sub-mobile{
+    margin:0 auto 18px;
+    max-width:22em;
+    font-size:14px;
+    line-height:1.9;
+  }
+  .hero-note-mobile{
+    margin-top:14px;
+    font-size:12px;
+    letter-spacing:.06em;
+  }
+  .hero-cta-row{gap:10px}
+  .hero-section-link{font-size:13px}
 }
 
 /* CTA buttons */
@@ -1225,7 +1276,7 @@ body{
     <h1 id="hero-title" class="sr-only">古今掌 小学生にもわかる、古典のいい言葉。</h1>
     <div class="hero-stage">
       <picture>
-        <source media="(max-width: 759px)" srcset="./assets/images/ogp.png" width="1200" height="630">
+        <source media="(max-width: 759px)" srcset="./assets/images/top_visual_mobile.webp" width="941" height="1000">
         <img class="hero-bg"
              src="./assets/images/kokonsho_pc_background.webp"
              alt="古典の妖精と男の子のイラスト。桜と紅葉、和の風景の中で、いっしょに本を読んでいる場面。"
@@ -1239,12 +1290,20 @@ body{
           <p class="hero-tag"><span class="phrase">小学生にもわかる、</span><span class="phrase">古典のいい言葉。</span></p>
         </div>
       </div>
+      <div class="hero-overlay-mobile" aria-hidden="true">
+        <p class="hero-kana-mobile">ここんしょう</p>
+        <div class="hero-title-mobile">古今掌</div>
+        <p class="hero-tag-mobile">小学生にもわかる、古典のいい言葉。</p>
+      </div>
     </div>
 
     <div class="hero-below">
-      <p class="hero-sub">
+      <p class="hero-sub hero-sub-desktop">
         百人一首、論語、故事成語、ことわざ、慣用句を、こども訳とふりがなで。<br>
         おうちの人といっしょに読める、古典カードアプリです。
+      </p>
+      <p class="hero-sub hero-sub-mobile">
+        百人一首からことわざまで、こども訳とふりがなで読めます。
       </p>
       <div class="hero-cta-row">
         <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
@@ -1255,8 +1314,11 @@ body{
           <span aria-hidden="true">↓</span>
         </a>
       </div>
-      <p class="hero-note">
+      <p class="hero-note hero-note-desktop">
         <b>登録不要</b><span class="dot">・</span><b>無料</b><span class="dot">・</span>スマホ／タブレット／PC
+      </p>
+      <p class="hero-note hero-note-mobile">
+        <b>登録不要</b><span class="dot">・</span><b>無料</b>
       </p>
     </div>
   </div>
