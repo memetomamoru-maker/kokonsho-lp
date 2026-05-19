@@ -2233,6 +2233,90 @@ body{
   }
 }
 
+
+/* ============================================================
+   Criteria compact refinement
+   ============================================================ */
+.criteria-compact{
+  padding-top:clamp(34px, 4.4vw, 52px);
+  padding-bottom:clamp(58px, 7vw, 88px);
+}
+.criteria-compact .criteria-panel{
+  padding:clamp(24px, 3.2vw, 34px);
+}
+.criteria-compact-head{
+  display:grid;
+  gap:10px;
+  margin-bottom:20px;
+}
+.criteria-compact .section-title{
+  margin-bottom:10px;
+}
+.criteria-compact .section-lead{
+  max-width:44em;
+  margin:0;
+  text-align:left;
+}
+.criteria-core-compact{
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  margin-bottom:20px;
+}
+.criteria-core-compact li{
+  padding:12px 14px;
+  font-size:14px;
+}
+.criteria-mini-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.criteria-mini{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:13px 14px;
+  border-radius:16px;
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(201,163,82,.20);
+}
+.criteria-mini b{
+  flex:0 0 auto;
+  min-width:7.8em;
+  color:var(--green-dark);
+  font-size:13px;
+  line-height:1.7;
+}
+.criteria-mini span{
+  color:var(--brown-soft);
+  font-size:13px;
+  line-height:1.7;
+}
+@media(min-width:780px){
+  .criteria-mini-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+  .criteria-mini:first-child{
+    grid-column:1 / -1;
+  }
+}
+@media(max-width:640px){
+  .criteria-core-compact{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .criteria-mini{
+    display:block;
+    padding:13px 14px;
+  }
+  .criteria-mini b{
+    display:block;
+    margin-bottom:3px;
+  }
+  .criteria-compact .section-lead{
+    text-align:center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2494,65 +2578,30 @@ body{
 
 
 <!-- ============== Selection criteria ============== -->
-<section class="section criteria" aria-labelledby="criteria-title">
+<section class="section criteria criteria-compact" aria-labelledby="criteria-title">
   <div class="wrap">
-    <div class="section-head">
-      <div class="rule-gold"></div>
-      <h2 id="criteria-title" class="section-title">どう選んだか。</h2>
-      <p class="section-lead">古今掌の300枚は、有名な言葉をただ並べたものではありません。小学生が意味を取りやすく、おうちで話しやすく、国語力や語彙の土台につながるものを中心に選んでいます。</p>
-    </div>
-
     <div class="criteria-panel">
-      <div class="criteria-intro">
-        <h3>基準は、学術的な網羅よりも、家庭で読める実用性。</h3>
-        <p>古典としての知名度だけではなく、生活に置き換えやすいか、1枚のカードとして意味が完結しやすいかを大切にしました。おうちの人が「これは知っておいてほしい」と思いやすく、子どもが「なんとなくわかる」と感じられる言葉を入口にしています。</p>
+      <div class="criteria-compact-head">
+        <div>
+          <h2 id="criteria-title" class="section-title">どう選んだか。</h2>
+          <p class="section-lead">古今掌の300枚は、有名さだけではなく、子どもが意味を取りやすく、おうちで話しやすいことを基準に選んでいます。</p>
+        </div>
       </div>
 
-      <ul class="criteria-core" aria-label="全体の選定基準">
-        <li><span class="mark">✓</span><span>小学生でも生活に置き換えやすい</span></li>
-        <li><span class="mark">✓</span><span>おうちの人と会話にしやすい</span></li>
-        <li><span class="mark">✓</span><span>語彙、読解、教養の土台につながる</span></li>
-        <li><span class="mark">✓</span><span>1枚のカードとして意味が伝わりやすい</span></li>
+      <ul class="criteria-core criteria-core-compact" aria-label="全体の選定基準">
+        <li><span class="mark">✓</span><span>生活に置き換えやすい</span></li>
+        <li><span class="mark">✓</span><span>会話にしやすい</span></li>
+        <li><span class="mark">✓</span><span>語彙と読解につながる</span></li>
+        <li><span class="mark">✓</span><span>1枚で意味が伝わる</span></li>
       </ul>
 
-      <div class="criteria-grid">
-        <article class="criteria-card">
-          <span class="count">百人一首 100</span>
-          <h4>和歌は、全100首を入口に。</h4>
-          <p>百人一首は古典和歌にふれる定番なので、選別ではなく全100首を収録しています。恋、季節、旅、孤独、家族など、短い歌の中にある気持ちを、こども訳で受け取りやすくしました。</p>
-          <div class="examples">例：天の原、花の色は、奥山に、あしびきの</div>
-        </article>
-
-        <article class="criteria-card">
-          <span class="count">論語 60</span>
-          <h4>学びと人間関係に置き換えやすい言葉。</h4>
-          <p>論語は説教臭くなりすぎないよう、学び、友人関係、自省、誠実さなど、子どもの生活に結びつけやすい章句を中心にしました。</p>
-          <div class="examples">例：学而時習之、温故知新、有朋自遠方来</div>
-        </article>
-
-        <article class="criteria-card">
-          <span class="count">故事成語 40</span>
-          <h4>物語として想像しやすい言葉。</h4>
-          <p>故事成語は由来の説明が長くなりやすいので、短く場面を想像できるものを優先しました。学校や入試でも見かけやすく、知っていると読解で助けになる言葉を選んでいます。</p>
-          <div class="examples">例：矛盾、蛇足、推敲、杞憂、背水の陣</div>
-        </article>
-
-        <article class="criteria-card">
-          <span class="count">ことわざ 50</span>
-          <h4>生活の知恵として使いやすい言葉。</h4>
-          <p>ことわざは、努力、失敗、挑戦、人間関係など、子どもが日常に置き換えやすいものを中心にしました。意味の誤解が学びになる定番も入れています。</p>
-          <div class="examples">例：急がば回れ、七転び八起き、情けは人のためならず</div>
-        </article>
-
-        <article class="criteria-card">
-          <span class="count">慣用句 50</span>
-          <h4>国語の語彙力に直結する言葉。</h4>
-          <p>慣用句は古典そのものではありませんが、読解の土台になる語彙として入れています。体の部位、感情、会話、人間関係にまつわる定番表現を中心にしました。</p>
-          <div class="examples">例：口を挟む、耳を貸す、腹をくくる、目から鱗が落ちる</div>
-        </article>
+      <div class="criteria-mini-grid" aria-label="ジャンル別の選定方針">
+        <div class="criteria-mini"><b>百人一首 100</b><span>古典和歌の入口として全首を収録。</span></div>
+        <div class="criteria-mini"><b>論語 60</b><span>学び、友人関係、自省に置き換えやすい言葉。</span></div>
+        <div class="criteria-mini"><b>故事成語 40</b><span>由来が短く、場面を想像しやすい言葉。</span></div>
+        <div class="criteria-mini"><b>ことわざ 50</b><span>生活の知恵として使いやすい定番。</span></div>
+        <div class="criteria-mini"><b>慣用句 50</b><span>国語の読解でつまずきやすい語彙。</span></div>
       </div>
-
-      <p class="criteria-note">古今掌は、古典を暗記するためだけのアプリではありません。子どもが言葉にふれ、おうちの人と話し、少しずつ語彙と教養を育てるための入口です。</p>
     </div>
   </div>
 </section>
