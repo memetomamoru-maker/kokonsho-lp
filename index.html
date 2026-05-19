@@ -2318,30 +2318,27 @@ body{
 }
 
 
+
 /* ============================================================
-   Cocon size refinement for Daily header
+   Cocon daily badge refinement
    ============================================================ */
 .daily-appicon{
-  width:72px;
-  height:72px;
+  width:76px;
+  height:76px;
   border-radius:22px;
-  padding:10px;
+  padding:4px;
+  object-fit:contain;
+  background:linear-gradient(180deg,#fffdf7,#f3ead0);
 }
 .daily-appbrand{
   gap:18px;
 }
-.daily-appname{
-  font-size:clamp(26px,3.2vw,34px);
-}
-.daily-appsub{
-  font-size:15px;
-}
 @media(max-width:759px){
   .daily-appicon{
-    width:58px;
-    height:58px;
-    border-radius:18px;
-    padding:8px;
+    width:64px;
+    height:64px;
+    border-radius:20px;
+    padding:4px;
   }
 }
 
@@ -2646,7 +2643,7 @@ body{
     <div class="daily-shell">
       <div class="daily-apphead" aria-hidden="true">
         <div class="daily-appbrand">
-          <img class="daily-appicon" src="./assets/images/kokon_icon.png" alt="">
+          <img class="daily-appicon" src="./assets/images/kokon_daily_badge.webp" alt="">
           <div>
             <div class="daily-appname">まいにち10枚</div>
             <div class="daily-appsub">おうちの人とチェック</div>
