@@ -820,16 +820,74 @@ body{
 .daily{
   background:linear-gradient(180deg, #f5ecd0 0%, #efe4c3 100%);
 }
+.daily-shell{
+  max-width:1080px;
+  margin:0 auto;
+  display:grid;
+  gap:18px;
+}
+.daily-apphead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:16px 18px;
+  background:linear-gradient(180deg, rgba(255,253,247,.98), rgba(250,244,222,.94));
+  border:1px solid rgba(201,163,82,.26);
+  border-radius:26px;
+  box-shadow:0 18px 42px rgba(82,68,40,.10);
+}
+.daily-appbrand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.daily-appicon{
+  width:52px;
+  height:52px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#fffdf7,#f3ead0);
+  padding:8px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.75), 0 8px 18px rgba(82,68,40,.08);
+  object-fit:contain;
+}
+.daily-appname{
+  font-family:var(--serif);
+  font-size:clamp(24px,3vw,30px);
+  font-weight:600;
+  color:var(--brown);
+  line-height:1.2;
+}
+.daily-appsub{
+  margin-top:4px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--green-dark);
+  letter-spacing:.04em;
+}
+.daily-head-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:7px 14px;
+  border-radius:999px;
+  background:rgba(230,237,207,.74);
+  border:1px solid rgba(117,139,86,.18);
+  color:var(--green-dark);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
 .daily-card{
   position:relative;
   background:linear-gradient(180deg, rgba(255,253,247,.98), rgba(250,244,222,.94));
   border:1px solid rgba(201,163,82,.30);
   border-radius:32px;
-  padding:clamp(28px, 4vw, 48px);
+  padding:clamp(24px, 3vw, 34px);
   box-shadow:0 26px 60px rgba(82,68,40,.14);
   overflow:hidden;
-  max-width:1080px;
-  margin:0 auto;
 }
 .daily-card::before{
   content:"";
@@ -846,7 +904,7 @@ body{
 .daily-inner{
   position:relative;
   display:grid;
-  gap:clamp(26px, 3.4vw, 44px);
+  gap:clamp(24px, 3vw, 38px);
 }
 .daily-kicker{
   display:inline-flex;align-items:center;gap:8px;
@@ -863,7 +921,7 @@ body{
 .daily-card .lead{
   margin:0 0 16px;
   font-size:clamp(14.5px, 1.6vw, 16px);
-  line-height:2;color:var(--brown-soft);max-width:32em;
+  line-height:2;color:var(--brown-soft);max-width:34em;
 }
 .daily-list{
   margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px;
@@ -878,47 +936,221 @@ body{
   display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700;
   margin-top:3px;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);
 }
-.daily-sample-board{
+.daily-cta-row{margin-top:18px}
+.daily-app-panel{
   position:relative;
-  background:rgba(255,253,247,.86);
+  background:rgba(255,253,247,.88);
   border:1px solid var(--line-2);
-  border-radius:26px;
-  padding:clamp(18px, 2.6vw, 26px);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.72);
-}
-.daily-board-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  margin-bottom:14px;
-}
-.daily-board-title{
-  font-family:var(--serif);
-  color:var(--brown);
-  font-weight:600;
-  letter-spacing:.06em;
-  font-size:clamp(16px, 2vw, 19px);
+  border-radius:28px;
+  padding:clamp(20px, 2.7vw, 28px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.72), 0 16px 32px rgba(82,68,40,.06);
 }
 .daily-board-date{
-  color:var(--brown-soft);font-size:12px;
-  background:rgba(230,237,207,.7);
-  padding:4px 10px;border-radius:999px;
-  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:0 13px;
+  border-radius:999px;
+  background:rgba(201,220,164,.68);
+  color:var(--brown-soft);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.04em;
 }
-.daily-progress{
-  margin-bottom:16px;
+.daily-panel-title{
+  margin:14px 0 10px;
+  font-family:var(--serif);
+  font-size:clamp(28px, 3.4vw, 40px);
+  line-height:1.45;
+  color:var(--brown);
+  text-wrap:balance;
 }
-.daily-progress-line{
-  display:flex;justify-content:space-between;align-items:center;gap:10px;
-  font-weight:700;color:var(--green-dark);font-size:13px;margin-bottom:8px;
+.daily-panel-lead{
+  margin:0;
+  max-width:36em;
+  font-size:14.5px;
+  line-height:1.85;
+  color:var(--brown-soft);
+}
+.daily-progress{margin:18px 0 0}
+.daily-progress-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+.daily-progress-main{
+  color:var(--green-dark);
+  font-size:14px;
+  font-weight:700;
+}
+.daily-progress-side{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(201,220,164,.48);
+  color:var(--green-dark);
+  font-size:12px;
+  font-weight:700;
 }
 .daily-progress .bar{height:8px;background:rgba(117,139,86,.13);border-radius:999px;overflow:hidden}
-.daily-progress .bar-fill{height:100%;width:70%;background:linear-gradient(90deg,#9bb072,var(--green));border-radius:999px}
-.daily-sample-grid{
-  display:grid;
-  grid-template-columns:1fr;
+.daily-progress .bar-fill{height:100%;width:0%;background:linear-gradient(90deg,#9bb072,var(--green));border-radius:999px}
+.daily-action-row{
+  display:flex;
+  align-items:center;
   gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.btn-subtle{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:999px;
+  border:1px solid rgba(201,163,82,.28);
+  background:#fffdf7;
+  color:var(--green-dark);
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 8px 18px rgba(82,68,40,.06);
+}
+.daily-panel-note{
+  margin:16px 0 0;
+  font-size:12.5px;
+  line-height:1.8;
+  color:var(--sub);
+}
+.daily-featured{
+  margin-top:18px;
+  background:linear-gradient(180deg,#fffef8,#f7f0dc);
+  border:1px solid rgba(201,163,82,.24);
+  border-radius:26px;
+  padding:20px 18px 18px;
+  box-shadow:0 10px 22px rgba(82,68,40,.07);
+}
+.daily-featured-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.daily-order{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:32px;
+  height:32px;
+  padding:0 10px;
+  border-radius:999px;
+  background:#f0e6c6;
+  color:var(--brown-soft);
+  font-size:13px;
+  font-weight:700;
+}
+.daily-featured .genre{
+  display:inline-flex;
+  align-items:center;
+  gap:.35em;
+  color:var(--green-dark);
+  background:rgba(117,139,86,.11);
+  border:1px solid rgba(117,139,86,.16);
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+.daily-featured .status{
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(82,68,40,.05);
+  color:var(--sub);
+  font-size:12px;
+  font-weight:700;
+}
+.daily-featured h4{
+  margin:16px 0 2px;
+  font-family:var(--serif);
+  font-size:clamp(25px, 2.8vw, 32px);
+  line-height:1.45;
+  color:var(--brown);
+}
+.daily-featured .reading{
+  margin:0 0 14px;
+  color:var(--brown-soft);
+  font-size:14px;
+  font-weight:700;
+}
+.daily-featured .translation-bubble{
+  margin:0;
+  padding:16px 18px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#f7eed2,#f2e6bd);
+  border:1px solid rgba(201,163,82,.28);
+  color:var(--brown);
+  font-family:var(--serif);
+  font-size:clamp(15px, 1.6vw, 17px);
+  line-height:1.8;
+}
+.daily-featured-meta{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.daily-meta-box{
+  min-height:100%;
+  padding:14px 14px 15px;
+  border-radius:18px;
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(201,163,82,.22);
+}
+.daily-meta-box strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--green-dark);
+  font-size:13px;
+}
+.daily-meta-box p{
+  margin:0;
+  color:var(--brown-soft);
+  font-size:13px;
+  line-height:1.8;
+}
+.daily-featured-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.daily-featured-actions span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:0 14px;
+  border-radius:999px;
+  background:#fffdf7;
+  border:1px solid rgba(201,163,82,.24);
+  color:var(--green-dark);
+  font-size:13px;
+  font-weight:700;
+}
+.daily-mini-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:10px;
+  margin-top:14px;
 }
 .daily-sample{
   position:relative;
@@ -973,7 +1205,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:70px;
+  min-height:84px;
   color:var(--green-dark);
   font-weight:700;
   letter-spacing:.08em;
@@ -986,28 +1218,47 @@ body{
   line-height:1.8;
   color:var(--sub);
 }
-@media(min-width:820px){
+@media(min-width:920px){
   .daily-inner{
-    grid-template-columns:.95fr 1.25fr;
-    align-items:center;
-    gap:48px;
+    grid-template-columns:.86fr 1.14fr;
+    align-items:start;
+    gap:34px;
   }
 }
-@media(min-width:620px){
-  .daily-sample-grid{
-    grid-template-columns:repeat(2, minmax(0,1fr));
+@media(max-width:759px){
+  .daily-apphead{
+    padding:14px 14px;
+    border-radius:22px;
   }
-  .daily-sample:first-child{
-    grid-column:1 / -1;
+  .daily-appicon{
+    width:46px;height:46px;border-radius:16px;padding:7px;
+  }
+  .daily-appname{font-size:clamp(22px,6vw,28px)}
+  .daily-appsub{font-size:13px}
+  .daily-head-pill{display:none}
+  .daily-panel-title{
+    font-size:clamp(26px, 7.6vw, 36px);
+    line-height:1.5;
+  }
+  .daily-featured-meta,
+  .daily-mini-grid{
+    grid-template-columns:1fr;
+  }
+  .daily-featured .status{
+    margin-left:0;
+  }
+  .daily-progress-meta{
+    flex-direction:column;
+    align-items:flex-start;
   }
 }
 @media(max-width:520px){
-  .daily-board-head{
-    align-items:flex-start;
-    flex-direction:column;
-  }
+  .daily-card{padding:18px 16px 20px}
+  .daily-app-panel{padding:18px 16px}
+  .daily-featured{padding:16px 14px 14px}
+  .daily-sample{padding:13px 14px}
+  .daily-panel-title{font-size:30px}
 }
-
 /* ============================================================
    Talk questions
    ============================================================ */
@@ -1562,7 +1813,7 @@ body{
       </div>
       <div class="sample-kid">
         <div class="badge"><small>こどもやく</small>こども訳</div>
-        <p>山鳥のしっぽは、すらりと長くたれている。<br>その姿みたいに、今夜はなかなか終わらない。<br>ひとりで眠る夜は時間がゆっくり進む。</p>
+        <p>山鳥の尾は、長く、長く垂れ下がっている。<br>その長さにたとえるほど、この夜は長い。<br>誰かのことが頭から離れなくて、眠れないまま夜が続いていく歌だよ。</p>
       </div>
       <div class="sample-rows">
         <div class="sample-row">
@@ -1704,75 +1955,122 @@ body{
       <p class="section-lead">百人一首だけではなく、論語、故事成語、ことわざ、慣用句まで。いろんな古典の言葉に毎日少しずつふれられます。</p>
     </div>
 
-    <div class="daily-card">
-      <div class="daily-inner">
-        <div>
-          <span class="daily-kicker">まいにち10枚</span>
-          <h3>ジャンルをまたいで<br>今日読む言葉がならびます。</h3>
-          <p class="lead">300枚の中から、日付ごとに10枚。同じ日に開けば、同じ10枚です。歌や教え、ことわざ、慣用句が混ざるので、ひとつの入口にかたよりません。</p>
-          <ul class="daily-list">
-            <li><span class="chk">✓</span>百人一首・論語・故事成語・ことわざ・慣用句をまとめて読めます</li>
-            <li><span class="chk">✓</span>同じ日は同じ10枚。おうちの人とも同じ言葉を見られます</li>
-            <li><span class="chk">✓</span>読んだらチェック。日付ごとに「読んだきろく」が残ります</li>
-            <li><span class="chk">✓</span>ぜんぶ読めない日があっても続けばOK</li>
-          </ul>
-          <div class="daily-cta-row">
-            <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
-              <span class="icon" aria-hidden="true">❀</span>今日の10枚を読む
-            </a>
+    <div class="daily-shell">
+      <div class="daily-apphead" aria-hidden="true">
+        <div class="daily-appbrand">
+          <img class="daily-appicon" src="./assets/images/kokon_icon.png" alt="">
+          <div>
+            <div class="daily-appname">まいにち10枚</div>
+            <div class="daily-appsub">おうちの人とチェック</div>
           </div>
         </div>
+        <div class="daily-head-pill">毎日ひらける10枚</div>
+      </div>
 
-        <div class="daily-sample-board" aria-label="今日の10枚のカード例">
-          <div class="daily-board-head">
-            <div class="daily-board-title">今日の10枚の例</div>
-            <div class="daily-board-date">ある日の例</div>
-          </div>
-          <div class="daily-progress">
-            <div class="daily-progress-line">
-              <span>7 / 10枚 読んだ</span>
-              <span>日付つきチェック</span>
+      <div class="daily-card">
+        <div class="daily-inner">
+          <div>
+            <span class="daily-kicker">まいにち10枚</span>
+            <h3>ジャンルをまたいで<br>今日読む言葉がならびます。</h3>
+            <p class="lead">300枚の中から、日付ごとに10枚。同じ日に開けば、同じ10枚です。歌や教え、ことわざ、慣用句が混ざるので、ひとつの入口にかたよりません。</p>
+            <ul class="daily-list">
+              <li><span class="chk">✓</span>百人一首・論語・故事成語・ことわざ・慣用句をまとめて読めます</li>
+              <li><span class="chk">✓</span>同じ日は同じ10枚。おうちの人とも同じ言葉を見られます</li>
+              <li><span class="chk">✓</span>読んだらチェック。日付ごとに「読んだきろく」が残ります</li>
+              <li><span class="chk">✓</span>ぜんぶ読めない日があっても続けばOK</li>
+            </ul>
+            <div class="daily-cta-row">
+              <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
+                <span class="icon" aria-hidden="true">❀</span>今日の10枚を読む
+              </a>
             </div>
-            <div class="bar"><div class="bar-fill"></div></div>
           </div>
 
-          <div class="daily-sample-grid">
-            <article class="daily-sample">
-              <span class="genre">百人一首</span>
-              <span class="done" aria-label="読んだ">✓</span>
-              <p class="original">山鳥の尾のしだり尾のながながし夜を</p>
-              <p class="translation">ひとりで眠る夜は時間がゆっくり進む。</p>
+          <div class="daily-app-panel" aria-label="今日の10枚のカード例">
+            <div class="daily-board-date">ある日の例</div>
+            <h4 class="daily-panel-title">おうちの人と読む、今日の10枚</h4>
+            <p class="daily-panel-lead">300枚から10枚をえらびます。同じ日は同じ10枚。読んだらチェックして、日付ごとのきろくに残せます。</p>
+
+            <div class="daily-progress">
+              <div class="daily-progress-meta">
+                <span class="daily-progress-main">0 / 10枚 読んだ</span>
+                <span class="daily-progress-side">ぜんぶ読まなくてもOK</span>
+              </div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+
+            <div class="daily-action-row">
+              <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
+                <span class="icon" aria-hidden="true">❀</span>今日の10枚を読む
+              </a>
+              <a class="btn-subtle" href="https://kokonsho.vercel.app/">きろくを見る</a>
+            </div>
+            <p class="daily-panel-note">読んだきろくは、この端末とブラウザの中に保存されます。端末やブラウザが変わると、引き継がれない場合があります。</p>
+
+            <article class="daily-featured">
+              <div class="daily-featured-top">
+                <span class="daily-order">01</span>
+                <span class="genre">慣用句</span>
+                <span class="status">未読</span>
+              </div>
+              <h4>口を挟む</h4>
+              <p class="reading">くちをはさむ</p>
+              <p class="translation-bubble">誰かが話している途中で、自分の意見を入れることを「口を挟む」と言うよ。よい場合も、邪魔になる場合もあるね。</p>
+              <div class="daily-featured-meta">
+                <div class="daily-meta-box">
+                  <strong>ことばポイント</strong>
+                  <p>「口」は発言のたとえ。相手の話に入ること自体は悪くないけれど、途中で入ると邪魔になることもある。タイミングまで含めて考える言葉だよ。</p>
+                </div>
+                <div class="daily-meta-box">
+                  <strong>おうちの人と話してみよう</strong>
+                  <p>口を挟むタイミングって、難しいと思う？</p>
+                </div>
+              </div>
+              <div class="daily-featured-actions" aria-hidden="true">
+                <span>読んだ</span>
+                <span>すき</span>
+                <span>くわしく読む</span>
+              </div>
             </article>
 
-            <article class="daily-sample">
-              <span class="genre">論語</span>
-              <span class="done" aria-label="読んだ">✓</span>
-              <p class="original">朋あり遠方より来たる</p>
-              <p class="translation">遠くの友だちが来てくれるのはうれしいこと。</p>
-            </article>
+            <div class="daily-mini-grid">
+              <article class="daily-sample">
+                <span class="genre">百人一首</span>
+                <span class="done" aria-label="読んだ">✓</span>
+                <p class="original">山鳥の尾のしだり尾のながながし夜を</p>
+                <p class="translation">眠れないまま夜が続いていく歌だよ。</p>
+              </article>
 
-            <article class="daily-sample">
-              <span class="genre">故事成語</span>
-              <p class="original">蛇足</p>
-              <p class="translation">よけいなものを足してかえってだめにしてしまうこと。</p>
-            </article>
+              <article class="daily-sample">
+                <span class="genre">論語</span>
+                <span class="done" aria-label="読んだ">✓</span>
+                <p class="original">朋あり遠方より来たる</p>
+                <p class="translation">遠くの友だちが来てくれるのはうれしいこと。</p>
+              </article>
 
-            <article class="daily-sample">
-              <span class="genre">ことわざ</span>
-              <p class="original">急がば回れ</p>
-              <p class="translation">急ぐときほどあわてず安全な道を選ぶ。</p>
-            </article>
+              <article class="daily-sample">
+                <span class="genre">故事成語</span>
+                <p class="original">蛇足</p>
+                <p class="translation">よけいなものを足して、かえってだめにしてしまうこと。</p>
+              </article>
 
-            <article class="daily-sample">
-              <span class="genre">慣用句</span>
-              <p class="original">手を焼く</p>
-              <p class="translation">どうしたらいいか困って扱いにくく感じること。</p>
-            </article>
+              <article class="daily-sample">
+                <span class="genre">ことわざ</span>
+                <p class="original">急がば回れ</p>
+                <p class="translation">急ぐときほど、あわてず安全な道を選ぶ。</p>
+              </article>
 
-            <div class="daily-sample more">あと5枚</div>
+              <article class="daily-sample">
+                <span class="genre">慣用句</span>
+                <p class="original">手を焼く</p>
+                <p class="translation">どうしたらいいか困って、扱いにくく感じること。</p>
+              </article>
+
+              <div class="daily-sample more">あと5枚</div>
+            </div>
+
+            <p class="daily-board-note">実際の「今日の10枚」は、日付ごとに組み合わせが変わります。</p>
           </div>
-
-          <p class="daily-board-note">実際の「今日の10枚」は日付ごとに組み合わせが変わります。</p>
         </div>
       </div>
     </div>
