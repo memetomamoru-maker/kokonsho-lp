@@ -2152,6 +2152,87 @@ body{
   }
 }
 
+
+/* ============================================================
+   Daily readability refinement (PC focus)
+   ============================================================ */
+.daily-card h3{
+  font-size:clamp(22px, 2.5vw, 29px);
+  line-height:1.6;
+  letter-spacing:.03em;
+  max-width:10.5em;
+  margin:14px 0 12px;
+}
+.daily-card .lead{
+  max-width:30em;
+  font-size:14.5px;
+  line-height:1.9;
+  margin-bottom:14px;
+}
+.daily-list{
+  gap:8px;
+}
+.daily-list li{
+  font-size:14px;
+  line-height:1.72;
+}
+.daily-left-note{
+  margin:16px 0 0;
+  color:var(--sub);
+  font-size:13px;
+  line-height:1.8;
+}
+.daily-panel-title{
+  font-size:clamp(24px, 2.9vw, 34px);
+  line-height:1.45;
+  max-width:8em;
+  margin:12px 0 8px;
+}
+.daily-panel-lead{
+  max-width:31em;
+  font-size:14px;
+  line-height:1.8;
+}
+.daily-progress{margin:16px 0 0}
+.daily-action-row{margin-top:16px}
+.daily-featured h4{
+  font-size:clamp(24px, 2.2vw, 30px);
+  margin:14px 0 2px;
+}
+.daily-featured .translation-bubble{
+  font-size:15px;
+  line-height:1.75;
+}
+.daily-meta-box p{
+  font-size:12.8px;
+  line-height:1.75;
+}
+.daily-mini-grid{
+  margin-top:12px;
+}
+@media(min-width:920px){
+  .daily-inner{
+    grid-template-columns:.74fr 1.26fr;
+    gap:42px;
+  }
+  .daily-app-panel{
+    padding:26px 24px;
+  }
+}
+@media(max-width:759px){
+  .daily-card h3{
+    max-width:none;
+    font-size:clamp(24px, 6.8vw, 30px);
+  }
+  .daily-left-note{
+    font-size:12.5px;
+  }
+  .daily-panel-title{
+    max-width:none;
+    font-size:clamp(26px, 7vw, 32px);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2501,25 +2582,20 @@ body{
         <div class="daily-inner">
           <div>
             <span class="daily-kicker">まいにち10枚</span>
-            <h3>ジャンルをまたいで<br>今日読む言葉がならびます。</h3>
-            <p class="lead">300枚の中から、日付ごとに10枚。同じ日に開けば、同じ10枚です。歌や教え、ことわざ、慣用句が混ざるので、ひとつの入口にかたよりません。</p>
+            <h3>今日読む10枚が、ひらきます。</h3>
+            <p class="lead">300枚の中から、その日の10枚を表示します。同じ日に開けば、同じ10枚。百人一首だけでなく、論語、故事成語、ことわざ、慣用句もいっしょに読めます。</p>
             <ul class="daily-list">
-              <li><span class="chk">✓</span>百人一首・論語・故事成語・ことわざ・慣用句をまとめて読めます</li>
-              <li><span class="chk">✓</span>同じ日は同じ10枚。おうちの人とも同じ言葉を見られます</li>
-              <li><span class="chk">✓</span>読んだらチェック。日付ごとに「読んだきろく」が残ります</li>
-              <li><span class="chk">✓</span>ぜんぶ読めない日があっても続けばOK</li>
+              <li><span class="chk">✓</span>5ジャンルを、かたよりなくまとめて読めます</li>
+              <li><span class="chk">✓</span>同じ日は同じ10枚。おうちの人ともいっしょに見やすい設計です</li>
+              <li><span class="chk">✓</span>読んだらチェック。日付ごとの「読んだきろく」に残せます</li>
             </ul>
-            <div class="daily-cta-row">
-              <a class="btn btn-primary" href="https://kokonsho.vercel.app/">
-                <span class="icon" aria-hidden="true">❀</span>今日の10枚を読む
-              </a>
-            </div>
+            <p class="daily-left-note">気になった一枚からで大丈夫。ぜんぶ読めない日があっても、続けばOKです。</p>
           </div>
 
           <div class="daily-app-panel" aria-label="今日の10枚のカード例">
             <div class="daily-board-date">ある日の例</div>
-            <h4 class="daily-panel-title">おうちの人と読む、今日の10枚</h4>
-            <p class="daily-panel-lead">300枚から10枚をえらびます。同じ日は同じ10枚。読んだらチェックして、日付ごとのきろくに残せます。</p>
+            <h4 class="daily-panel-title">ある日の10枚</h4>
+            <p class="daily-panel-lead">300枚から、その日の10枚を表示します。同じ日は同じ組み合わせ。おうちの人といっしょに、読んだ分をきろくできます。</p>
 
             <div class="daily-progress">
               <div class="daily-progress-meta">
