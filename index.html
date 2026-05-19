@@ -7,13 +7,14 @@
 <meta name="description" content="百人一首・論語・故事成語・ことわざ・慣用句を、こども訳とふりがなで。おうちの人といっしょに読める古典カードアプリ「古今掌（ここんしょう）」の紹介ページ。無料・登録不要。">
 <meta name="theme-color" content="#fbf3dc">
 <meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://kokonsho-lp.vercel.app/">
 
 <!-- OGP -->
-<!-- OGP_DEPLOY_NOTE: LINEなどで確実に表示するには、公開URL確定後に og:image / twitter:image を絶対URLに変更してください。 -->
 <meta property="og:title" content="古今掌｜小学生にもわかる、古典のいい言葉。">
 <meta property="og:description" content="百人一首・論語・故事成語・ことわざ・慣用句を、こども訳とふりがなで。おうちの人といっしょに読める古典カードアプリ。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="./assets/images/ogp.png">
+<meta property="og:url" content="https://kokonsho-lp.vercel.app/">
+<meta property="og:image" content="https://kokonsho-lp.vercel.app/assets/images/ogp.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
@@ -24,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="古今掌｜小学生にもわかる、古典のいい言葉。">
 <meta name="twitter:description" content="百人一首・論語・故事成語・ことわざ・慣用句を、こども訳とふりがなで。おうちの人といっしょに読める古典カードアプリ。">
-<meta name="twitter:image" content="./assets/images/ogp.png">
+<meta name="twitter:image" content="https://kokonsho-lp.vercel.app/assets/images/ogp.png">
 <meta name="twitter:image:alt" content="古今掌 小学生にもわかる、古典のいい言葉。おうちで読める古典カード。">
 
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png">
@@ -140,7 +141,7 @@ h1,h2,h3,h4{
 .section-head{
   text-align:center;
   max-width:780px;
-  margin:0 auto clamp(40px, 6vw, 64px);
+  margin:0 auto clamp(32px, 5vw, 54px);
 }
 .section-head .section-lead{margin-left:auto;margin-right:auto}
 
@@ -163,11 +164,7 @@ h1,h2,h3,h4{
 }
 
 /* Hairline gold divider */
-.rule-gold{
-  width:48px;height:1px;
-  background:linear-gradient(90deg,transparent, rgba(201,163,82,.7), transparent);
-  margin:0 auto 18px;
-}
+.rule-gold{display:none !important;}
 
 /* Counter (一・二・三) */
 .kanji-num{
@@ -1530,7 +1527,7 @@ body{
       <article class="intro-card">
         <span class="kanji-num">一</span>
         <h3>原文の手ざわりにふれる。</h3>
-        <p>百人一首、論語、ことわざ。むかしの人がえらんだ言葉のかたちをまずはそのまま見てみる。読めなくても大丈夫です。</p>
+        <p>百人一首、論語、ことわざなど。むかしの人がえらんだ言葉のかたちをまずはそのまま見てみる。読めなくても大丈夫です。</p>
       </article>
       <article class="intro-card">
         <span class="kanji-num">二</span>
@@ -1729,7 +1726,7 @@ body{
         <div class="daily-sample-board" aria-label="今日の10枚のカード例">
           <div class="daily-board-head">
             <div class="daily-board-title">今日の10枚の例</div>
-            <div class="daily-board-date">2026.05.16</div>
+            <div class="daily-board-date">ある日の例</div>
           </div>
           <div class="daily-progress">
             <div class="daily-progress-line">
