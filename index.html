@@ -814,6 +814,172 @@ body{
   max-width:34em;
 }
 
+
+/* ============================================================
+   Selection criteria
+   ============================================================ */
+.criteria{
+  background:linear-gradient(180deg, rgba(255,253,245,.58), rgba(245,236,208,.76));
+}
+.criteria-panel{
+  max-width:1080px;
+  margin:0 auto;
+  background:linear-gradient(180deg, rgba(255,253,247,.96), rgba(250,244,222,.92));
+  border:1px solid rgba(201,163,82,.28);
+  border-radius:32px;
+  padding:clamp(26px, 4vw, 44px);
+  box-shadow:0 24px 58px rgba(82,68,40,.12);
+}
+.criteria-intro{
+  display:grid;
+  gap:18px;
+  align-items:start;
+  margin-bottom:clamp(24px, 3vw, 34px);
+}
+.criteria-intro h3{
+  font-family:var(--serif);
+  font-size:clamp(24px, 3.4vw, 34px);
+  line-height:1.55;
+  letter-spacing:.05em;
+  color:var(--brown);
+  margin:0;
+}
+.criteria-intro p{
+  margin:0;
+  color:var(--brown-soft);
+  font-size:15px;
+  line-height:1.95;
+}
+.criteria-core{
+  display:grid;
+  gap:12px;
+  grid-template-columns:1fr;
+  margin:0 0 clamp(28px, 4vw, 40px);
+  padding:0;
+}
+.criteria-core li{
+  list-style:none;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(201,163,82,.20);
+  border-radius:18px;
+  padding:14px 16px;
+  color:var(--brown);
+  font-weight:700;
+  line-height:1.75;
+}
+.criteria-core .mark{
+  flex:0 0 auto;
+  width:24px;
+  height:24px;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:linear-gradient(180deg,#9bb072,#7e9559);
+  font-size:13px;
+  margin-top:2px;
+}
+.criteria-grid{
+  display:grid;
+  gap:14px;
+  grid-template-columns:1fr;
+}
+.criteria-card{
+  position:relative;
+  background:rgba(255,253,247,.82);
+  border:1px solid rgba(201,163,82,.22);
+  border-radius:22px;
+  padding:20px 18px 19px;
+  box-shadow:0 10px 22px rgba(82,68,40,.06);
+}
+.criteria-card .count{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 11px;
+  border-radius:999px;
+  background:rgba(117,139,86,.12);
+  color:var(--green-dark);
+  border:1px solid rgba(117,139,86,.16);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  margin-bottom:10px;
+}
+.criteria-card h4{
+  font-family:var(--serif);
+  font-size:clamp(19px, 2.2vw, 23px);
+  line-height:1.5;
+  letter-spacing:.05em;
+  color:var(--brown);
+  margin:0 0 8px;
+}
+.criteria-card p{
+  margin:0;
+  font-size:13.8px;
+  line-height:1.9;
+  color:var(--brown-soft);
+}
+.criteria-card .examples{
+  margin-top:10px;
+  font-size:12.5px;
+  line-height:1.8;
+  color:var(--sub);
+}
+.criteria-note{
+  margin:22px 0 0;
+  padding:15px 17px;
+  border-radius:18px;
+  background:rgba(230,237,207,.34);
+  border:1px solid rgba(117,139,86,.14);
+  color:var(--green-dark);
+  font-size:13.5px;
+  line-height:1.85;
+  font-weight:700;
+}
+@media(min-width:760px){
+  .criteria-intro{
+    grid-template-columns:.82fr 1.18fr;
+    gap:32px;
+  }
+  .criteria-core{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+  .criteria-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+  .criteria-card:first-child{
+    grid-column:1 / -1;
+  }
+}
+@media(min-width:1040px){
+  .criteria-grid{
+    grid-template-columns:repeat(3, minmax(0,1fr));
+  }
+  .criteria-card:first-child{
+    grid-column:auto;
+  }
+}
+@media(max-width:640px){
+  .criteria-panel{
+    padding:24px 18px;
+    border-radius:26px;
+  }
+  .criteria-core li{
+    padding:13px 14px;
+    font-size:14px;
+  }
+  .criteria-card{
+    padding:18px 16px;
+  }
+  .criteria-card p{
+    line-height:1.84;
+  }
+}
+
 /* ============================================================
    Daily 10
    ============================================================ */
@@ -1943,6 +2109,71 @@ body{
     <p class="genre-foot">
       ぜんぶ覚えなくて大丈夫。<br>気になった一枚からすこしずつ。
     </p>
+  </div>
+</section>
+
+
+<!-- ============== Selection criteria ============== -->
+<section class="section criteria" aria-labelledby="criteria-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rule-gold"></div>
+      <h2 id="criteria-title" class="section-title">どう選んだか。</h2>
+      <p class="section-lead">古今掌の300枚は、有名な言葉をただ並べたものではありません。小学生が意味を取りやすく、おうちで話しやすく、国語力や語彙の土台につながるものを中心に選んでいます。</p>
+    </div>
+
+    <div class="criteria-panel">
+      <div class="criteria-intro">
+        <h3>基準は、学術的な網羅よりも、家庭で読める実用性。</h3>
+        <p>古典としての知名度だけではなく、生活に置き換えやすいか、1枚のカードとして意味が完結しやすいかを大切にしました。おうちの人が「これは知っておいてほしい」と思いやすく、子どもが「なんとなくわかる」と感じられる言葉を入口にしています。</p>
+      </div>
+
+      <ul class="criteria-core" aria-label="全体の選定基準">
+        <li><span class="mark">✓</span><span>小学生でも生活に置き換えやすい</span></li>
+        <li><span class="mark">✓</span><span>おうちの人と会話にしやすい</span></li>
+        <li><span class="mark">✓</span><span>語彙、読解、教養の土台につながる</span></li>
+        <li><span class="mark">✓</span><span>1枚のカードとして意味が伝わりやすい</span></li>
+      </ul>
+
+      <div class="criteria-grid">
+        <article class="criteria-card">
+          <span class="count">百人一首 100</span>
+          <h4>和歌は、全100首を入口に。</h4>
+          <p>百人一首は古典和歌にふれる定番なので、選別ではなく全100首を収録しています。恋、季節、旅、孤独、家族など、短い歌の中にある気持ちを、こども訳で受け取りやすくしました。</p>
+          <div class="examples">例：天の原、花の色は、奥山に、あしびきの</div>
+        </article>
+
+        <article class="criteria-card">
+          <span class="count">論語 60</span>
+          <h4>学びと人間関係に置き換えやすい言葉。</h4>
+          <p>論語は説教臭くなりすぎないよう、学び、友人関係、自省、誠実さなど、子どもの生活に結びつけやすい章句を中心にしました。</p>
+          <div class="examples">例：学而時習之、温故知新、有朋自遠方来</div>
+        </article>
+
+        <article class="criteria-card">
+          <span class="count">故事成語 40</span>
+          <h4>物語として想像しやすい言葉。</h4>
+          <p>故事成語は由来の説明が長くなりやすいので、短く場面を想像できるものを優先しました。学校や入試でも見かけやすく、知っていると読解で助けになる言葉を選んでいます。</p>
+          <div class="examples">例：矛盾、蛇足、推敲、杞憂、背水の陣</div>
+        </article>
+
+        <article class="criteria-card">
+          <span class="count">ことわざ 50</span>
+          <h4>生活の知恵として使いやすい言葉。</h4>
+          <p>ことわざは、努力、失敗、挑戦、人間関係など、子どもが日常に置き換えやすいものを中心にしました。意味の誤解が学びになる定番も入れています。</p>
+          <div class="examples">例：急がば回れ、七転び八起き、情けは人のためならず</div>
+        </article>
+
+        <article class="criteria-card">
+          <span class="count">慣用句 50</span>
+          <h4>国語の語彙力に直結する言葉。</h4>
+          <p>慣用句は古典そのものではありませんが、読解の土台になる語彙として入れています。体の部位、感情、会話、人間関係にまつわる定番表現を中心にしました。</p>
+          <div class="examples">例：口を挟む、耳を貸す、腹をくくる、目から鱗が落ちる</div>
+        </article>
+      </div>
+
+      <p class="criteria-note">古今掌は、古典を暗記するためだけのアプリではありません。子どもが言葉にふれ、おうちの人と話し、少しずつ語彙と教養を育てるための入口です。</p>
+    </div>
   </div>
 </section>
 
